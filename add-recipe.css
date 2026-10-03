@@ -1,0 +1,177 @@
+:root {
+  --page-bg: rgb(11, 27, 51);
+  --surface-color: rgb(19, 41, 70);
+  --surface-raised: rgb(25, 54, 85);
+  --text-color: rgb(232, 240, 251);
+  --text-muted: rgb(169, 187, 209);
+  --border-color: rgb(41, 69, 99);
+  --primary-color: rgb(99, 214, 197);
+  --primary-dark: rgb(66, 185, 168);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  padding: 30px 15px;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+input,
+button {
+  font-family: inherit;
+  color: inherit;
+}
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+.back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*width: 30px;*/
+  height: 30px;
+  background-color: var(--page-bg);
+  border: 1px solid var(--text-muted);
+  /* border-radius: 50%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-button a {
+  color: var(--text-muted);
+  font-size: 15px;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+}
+.main-div h1 span {
+  color: rgb(233, 162, 59);
+}
+form {
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px 10px 10px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin-top: 30px;
+
+  width: 400px;
+}
+div h3 {
+  padding-bottom: 20px;
+}
+.form-div {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0px;
+  font-size: 15px;
+  width: 100%;
+
+  align-items: center;
+}
+
+.fields-div input[type="text"],
+.fields-div input[type="url"],
+.fields-div input[type="file"] {
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 35px;
+  padding-left: 10px;
+  outline: none;
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+}
+.fields-div input[type="text"]:focus,
+.fields-div input[type="url"]:focus {
+  background-color: var(--surface-raised);
+}
+.fields-div input[type="file"] {
+  height: 40px;
+}
+input[type="file"]::file-selector-button {
+  font-family: inherit;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 4px 10px;
+  margin-right: 8px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15 ease;
+}
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--primary-dark);
+}
+input[type="file"]::file-selector-button:active {
+  transform: translateX(2px);
+}
+.button-div {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+button {
+  width: 100px;
+
+  margin-top: 20px;
+  border: none;
+  background-color: rgb(233, 162, 59);
+  padding: 10px 7px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: var(--page-bg);
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+button:hover {
+  background-color: rgb(207, 133, 39);
+  transform: translateY(-2px);
+}
+button:active {
+  background-color: rgb(159, 103, 30);
+}
+.secondary-button {
+  background: transparent;
+  border: 1px solid var(--text-muted);
+  color: var(--text-color);
+  box-shadow: none;
+}
+.secondary-button:hover {
+  background: var(--surface-raised);
+}
+.secondary-button:active {
+  background-color: var(--surface-color);
+}
